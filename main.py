@@ -1,7 +1,8 @@
-from agent_chatbot_backend import chat_model
+from agent_chatbot_backend import chat_model, get_all_threads
 from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
 import streamlit as st
 import uuid 
+
 
 # Generate a unique thread ID for each new conversation
 def generate_thread_id():
@@ -66,7 +67,7 @@ if "thread_id" not in st.session_state:
 
 # Create a list for storing all conversation thread IDs
 if "chat_threads" not in st.session_state:
-    st.session_state["chat_threads"] = []
+    st.session_state["chat_threads"] = get_all_threads()
 
 
 

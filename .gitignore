@@ -1,1 +1,7 @@
 .env
+.uvlock
+.pyproject.toml
+.python-version
+.pytest_cache/
+__pycache__/
+_pycodestyle_cache/
